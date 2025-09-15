@@ -1,0 +1,3 @@
+[submodule "backend/Smart-Airline-Passenger-Complaint-Analyzer"]
+	path = backend/Smart-Airline-Passenger-Complaint-Analyzer
+	url = https://huggingface.co/spaces/dewapura/Smart-Airline-Passenger-Complaint-Analyzer
