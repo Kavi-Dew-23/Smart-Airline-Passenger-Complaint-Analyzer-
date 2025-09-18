@@ -20,9 +20,9 @@ public class ModelApiService
 
     public async Task<PredictResponse> PredictAsync(string feedback)
     {
-
         var response = await _http.PostAsJsonAsync("predict", new { text = feedback });
         response.EnsureSuccessStatusCode();
         return await response.Content.ReadFromJsonAsync<PredictResponse>();
     }
+
 }
