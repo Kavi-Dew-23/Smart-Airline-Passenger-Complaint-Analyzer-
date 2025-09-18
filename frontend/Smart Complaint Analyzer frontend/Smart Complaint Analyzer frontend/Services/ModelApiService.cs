@@ -11,6 +11,7 @@ public class PredictResponse
 public class ModelApiService
 {
     private readonly HttpClient _http;
+    
     public ModelApiService(HttpClient http)
     {
         _http = http;
@@ -20,7 +21,7 @@ public class ModelApiService
     public async Task<PredictResponse> PredictAsync(string feedback)
     {
 
-        var response = await _http.PostAsJsonAsync("http://127.0.0.1:8000/predict", new { text = feedback });
+        var response = await _http.PostAsJsonAsync("predict", new { text = feedback });
         response.EnsureSuccessStatusCode();
         return await response.Content.ReadFromJsonAsync<PredictResponse>();
     }
